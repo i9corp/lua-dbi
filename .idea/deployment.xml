@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="Deploy/Debian (e1548da6-53eb-48c5-9042-f067631cb69c)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.lomMJC0LF6" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Deploy/FreeBSD (AMD64) (7bbf4840-7a96-4577-b980-333fcda89689)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.2sQij1w5" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Deploy/FreeBSD (ARM64) (4f434039-75a3-4f04-aef4-12dda03d7ffa)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.Iekom3aA" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

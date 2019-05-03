@@ -1,0 +1,4 @@
+Cannot generate into D:\Workspace\lua-dbi\cmake-build-debug
+Specified path is not a directory
+
+Please either delete it manually or select another generation directory
