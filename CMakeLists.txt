@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 project(dbdpostgresql)
 
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/dist)
 
 set(DBDMYSQL dbdmysql)
 set(DBDPSQL dbdpostgresql)
@@ -38,3 +39,19 @@ include_directories(${PostgreSQL_INCLUDE_DIRS} ${LUA_INCLUDE_DIR})
 
 add_library(${PROJECT_NAME} SHARED dbd/postgresql/connection.c dbd/postgresql/dbd_postgresql.h dbd/postgresql/main.c dbd/postgresql/statement.c dbd/common.c dbd/common.h)
 target_link_libraries(${PROJECT_NAME} ${PostgreSQL_LIBRARIES} ${LUA_LIBRARIES})
+
+
+set(LUA_BINDIR bin)
+set(LUA_BINCOMPONENT runtime)
+set(LUA_LIBDIR lib)
+set(LUA_LIBCOMPONENT dev)
+set(LUA_INCLUDEDIR)
+set(LUA_INCLUDECOMPONENT dev)
+
+message("Install dir: ${CMAKE_INSTALL_PREFIX}")
+install(FILES DBI.lua DESTINATION bin)
+install(TARGETS ${PROJECT_NAME}
+        RUNTIME DESTINATION ${LUA_BINDIR} COMPONENT ${LUA_BINCOMPONENT}
+        LIBRARY DESTINATION ${LUA_LIBDIR} COMPONENT ${LUA_LIBCOMPONENT}
+        ARCHIVE DESTINATION ${LUA_LIBDIR} COMPONENT ${LUA_LIBCOMPONENT}
+        PUBLIC_HEADER DESTINATION ${LUA_INCLUDEDIR} COMPONENT ${LUA_INCLUDECOMPONENT})
