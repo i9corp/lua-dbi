@@ -26,7 +26,7 @@ EOF
 
 cat >> ${STAGEDIR}/+MANIFEST <<EOF
 name: lua51-dbi-pgsql
-version: "1.0.0"
+version: "@VERSION@"
 origin: sysutils/lua51-dbi-pgsql
 comment: "LUA DBI Driver PostgreSQL Unofficial"
 desc: "LUA DBI Driver PostgreSQL Unofficial"
