@@ -38,7 +38,7 @@ EOF
 
 echo "deps: {" >> ${STAGEDIR}/+MANIFEST
 pkg rquery -r i9corp '  %n: { version: "%v", origin: %o }' lua51 >> ${STAGEDIR}/+MANIFEST
-pkg rquery -r i9corp '  %n: { version: "%v", origin: %o }' postgresql96-client >> ${STAGEDIR}/+MANIFEST
+pkg rquery -r i9corp '  %n: { version: "%v", origin: %o }' postgresql12-client >> ${STAGEDIR}/+MANIFEST
 echo "}" >> ${STAGEDIR}/+MANIFEST
 
 mkdir -p ${STAGEDIR}/usr/local/share/lua/5.1
